@@ -38,6 +38,10 @@ about:
   dev_url: https://github.com/pika/pika
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/44628
+    reason: Client request
   recipe-maintainers:
+    - ianaobi
     - ltalirz
     - chrisjsewell
