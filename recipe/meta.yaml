@@ -13,13 +13,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-build-isolation -vvv '
 
 requirements:
   host:
     - pip
     - python >=3.6
     - setuptools
+    - wheel
 
   run:
     - python >=3.6
@@ -27,6 +28,8 @@ requirements:
 test:
   imports:
     - pika
+  commands:
+    - pip check
 
 about:
   home: https://pika.readthedocs.io
